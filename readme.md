@@ -11,3 +11,4 @@ SystemOut
 
 mvn exec:java -Dexec.mainClass="com.yourpackage.YourMainClass"
 mvn exec:java -Dexec.mainClass="com.example.Main"
+mvn package
