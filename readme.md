@@ -2,6 +2,7 @@ This Repo will contain Lambdas and Streams API from Educative.io
 
 https://www.educative.io/courses/java-8-lambdas-stream-api-beyond/writing-your-first-lambda
 
+<<<<<<< HEAD
 - New features introduced in Java 8
   - Functional interfaces
   - Default and static methods in interfaces
@@ -17,3 +18,15 @@ https://www.educative.io/courses/java-8-lambdas-stream-api-beyond/writing-your-f
 
     - Before Java 8, if a new method was introduced in an interface then all the implementing classes used to break. We would need to provide the implementation of that method in all the implementing classes.
 
+=======
+keyworlds
+
+Class
+main
+SystemOut
+
+
+mvn exec:java -Dexec.mainClass="com.yourpackage.YourMainClass"
+mvn exec:java -Dexec.mainClass="com.example.Main"
+mvn package
+>>>>>>> c13e4406d65f2c48c648d94cc04a026be6970c1e
