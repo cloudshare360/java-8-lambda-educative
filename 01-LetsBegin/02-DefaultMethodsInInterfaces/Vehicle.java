@@ -2,8 +2,7 @@ public interface Vehicle {
 
     void cleanVehicle();
 
-    default void startVehicle(){
-
-        System.out.println("Start Vehicle!");
+    default void startVehicle() {
+        System.out.println("Vehicle is starting");
     }
 }
