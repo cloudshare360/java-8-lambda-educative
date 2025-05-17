@@ -1,16 +1,16 @@
-public class Car extends Vehicle {
+public class Car implements Vehicle {
 
-    @Override
-    void cleanVehicle()
-    {
-       System.out.println("Cleaning the vehicle started");
-    }
+   @Override
+   public void cleanVehicle()
+   {
+      System.out.println("Cleaning the vehicle started");
+   }
 
-    public static void main(String args[])
-    {
-       Car car = new Car();
-       car.cleanVehicle();
-       car.startVehicle();
-    }
+   public static void main(String args[])
+   {
+      Car car = new Car();
+      car.cleanVehicle();
+      car.startVehicle();
+   }
 
 }
