@@ -1,6 +1,6 @@
 {
   "name": "Java Multi-Version Dev Container",
-  "image": "mcr.microsoft.com/vscode/devcontainers/universal:focal",
+  "image": "mcr.microsoft.com/devcontainers/java:1-21",
   "customizations": {
     "vscode": {
       "extensions": [

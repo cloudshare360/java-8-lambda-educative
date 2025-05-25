@@ -1,4 +1,8 @@
 tasks:
+  - name: Cleanup Docker
+    command: |
+      docker system prune -af
+      docker volume prune -f
   - init: |
       chmod +x ./setup-java-21-and-update-settings.sh
       ./setup-java-21-and-update-settings.sh
