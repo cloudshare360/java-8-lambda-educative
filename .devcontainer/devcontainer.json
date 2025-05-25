@@ -24,7 +24,8 @@
       "groovyVersion": "2.5.22"
     }
   },
-  "postCreateCommand": "source /etc/profile.d/sdkman.sh && sdk install java 17.0.13-open && sdk install java 21.0.3-open && sdk default java 21.0.3-open && chmod +x /workspaces/.devcontainer/scripts/configure-java-settings.sh && /workspaces/.devcontainer/scripts/configure-java-settings.sh",
+  "postCreateCommand": "source /etc/profile.d/sdkman.sh && sdk install java 21.0.3-open && sdk default java 21.0.3-open && chmod +x /workspaces/java-8-lambda-educative/scripts/detect-and-write-settings.sh && /workspaces/java-8-lambda-educative/scripts/detect-and-write-settings.sh"
+  "postCreateCommand1": "source /etc/profile.d/sdkman.sh && sdk install java 17.0.13-open && sdk install java 21.0.3-open && sdk default java 21.0.3-open && chmod +x /workspaces/.devcontainer/scripts/configure-java-settings.sh && /workspaces/.devcontainer/scripts/configure-java-settings.sh",
   "mounts": [],
   "remoteUser": "vscode"
 }

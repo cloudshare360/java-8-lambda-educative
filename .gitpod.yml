@@ -1,0 +1,10 @@
+tasks:
+  - name: Setup Java & VS Code Settings
+    init: |
+      curl -s "https://get.sdkman.io " | bash
+      source "$HOME/.sdkman/bin/sdkman-init.sh"
+      sdk install java 21.0.3-open
+      sdk default java 21.0.3-open
+
+      chmod +x ./scripts/detect-and-write-settings.sh
+      ./scripts/detect-and-write-settings.sh
