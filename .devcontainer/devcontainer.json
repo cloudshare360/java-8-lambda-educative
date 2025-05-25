@@ -4,6 +4,14 @@
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21",
       "jdkDistro": "tem",
+      "installGradle": true,
+      "gradleVersion": "7.5.1",
+      "installMaven": true,
+      "mavenVersion": "3.6.3",
+      "installAnt": true,
+      "antVersion": "1.10.12",
+      "installGroovy": true,
+      "groovyVersion": "2.5.22"
     }
   }
 }
