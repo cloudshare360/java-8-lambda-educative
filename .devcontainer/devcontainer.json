@@ -5,7 +5,6 @@
     "vscode": {
       "extensions": [
         "vscjava.vscode-java-pack",
-        "redhat.java",
         "golang.go",
         "ms-vscode.gradle-language-service"
       ]
