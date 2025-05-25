@@ -23,7 +23,7 @@ sdk install java 21.0.6-tem
 
 # 3. Set Java 21 as default (no prompt)
 echo -e "${GREEN}⚡ Setting Java 21 as default...${NC}"
-sdk default java 21.0.6-tem
+yes | sdk default java 21.0.6-tem
 
 # 4. Get current Java home path
 JAVA_HOME_PATH=$(sdk home java 21.0.6-tem)
