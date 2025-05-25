@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # ANSI color codes for output
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
@@ -16,11 +14,14 @@ else
   source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
 
+# Set non-interactive mode
+export SDKMAN_AUTO_ANSWER=true
+
 # 2. Install Java 21 using SDKMAN
 echo -e "${GREEN}📥 Installing OpenJDK 21 via SDKMAN...${NC}"
 sdk install java 21.0.6-tem
 
-# 3. Set Java 21 as default
+# 3. Set Java 21 as default (no prompt)
 echo -e "${GREEN}⚡ Setting Java 21 as default...${NC}"
 sdk default java 21.0.6-tem
 
