@@ -1,5 +1,15 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "Java Multi-Version Dev Container",
+  "image": "mcr.microsoft.com/vscode/devcontainers/universal:focal",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.java",
+        "golang.go",
+        "ms-vscode.gradle-language-service"
+      ]
+    }
+  },
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21",
@@ -13,5 +23,8 @@
       "installGroovy": true,
       "groovyVersion": "2.5.22"
     }
-  }
+  },
+  "postCreateCommand": "source /etc/profile.d/sdkman.sh && sdk install java 17.0.13-open && sdk install java 21.0.3-open && sdk default java 21.0.3-open && chmod +x /workspaces/.devcontainer/scripts/configure-java-settings.sh && /workspaces/.devcontainer/scripts/configure-java-settings.sh",
+  "mounts": [],
+  "remoteUser": "vscode"
 }
