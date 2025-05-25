@@ -35,3 +35,7 @@ echo "$JAVA_HOME_PATH"
 # 6. Verify installation
 echo -e "\n${GREEN}🔍 Verifying Java version:${NC}"
 java -version
+
+# 7. Install direnv
+echo -e "${GREEN}📥 Installing OpenJDK 21 via SDKMAN...${NC}"
+sudo apt install direnv
