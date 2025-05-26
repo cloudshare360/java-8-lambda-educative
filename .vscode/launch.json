@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "BinaryOperatorDemo",
+      "request": "launch",
+      "mainClass": "BinaryOperatorDemo",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "UnaryOperatorTest",
+      "request": "launch",
+      "mainClass": "UnaryOperatorTest",
+      "projectName": ""
+    },
+    {
+      "type": "java",
       "name": "BiFunctionInterfaceDemo",
       "request": "launch",
       "mainClass": "BiFunctionInterfaceDemo"

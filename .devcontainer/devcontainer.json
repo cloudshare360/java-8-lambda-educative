@@ -3,6 +3,15 @@
   "image": "mcr.microsoft.com/devcontainers/java:1-21",
   "customizations": {
     "vscode": {
+      "settings": {
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-21",
+            "path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem",
+            "default": true
+          }
+        ]
+      },
       "extensions": [
         "redhat.java",
         "vscjava.vscode-java-debug",
