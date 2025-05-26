@@ -4,5 +4,5 @@ image:
 vscode:
   extensions:
     - redhat.java@latest
-    - vscjava.vscode-java-pack
+    - pleiades.java-extension-pack-jdk
     - formulahendry.code-runner
