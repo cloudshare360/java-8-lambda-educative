@@ -4,8 +4,8 @@
   "files.autoSave": "onFocusChange",
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-21",
-      "path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem",
+      "name": "JavaSE-11",
+      "path": "/home/gitpod/.sdkman/candidates/java/11.0.27.fx-zulu/bin/java",
       "default": true
     }
   ]
