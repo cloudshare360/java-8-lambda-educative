@@ -8,30 +8,32 @@ create_directories() {
     mkdir -p "$target_dir"
     cd "$target_dir" || { echo "Failed to enter $target_dir"; exit 1; }
 
-
     local items=(
-"Introduction",
-"Filtering-Operations-in-Stream",
-"Mapping-Operations-in-Stream",
-"Method-References",
-"Optional-in-Java-8-Part-1",
-"Optional-in-Java-8-Part-2",
-"Slicing-Operations-in-Stream",
-"Matching-Operations-in-Stream",
-"Finding-Operations-in-Stream",
-"Mutable-Reduction-Through-reduce",
-"Collectors-Collection-Operations.",
-"Collectors-Aggregation-Operations",
-"Collectors-Grouping-Operations",
-"Parallel-Stream",
-"Lazy-Evaluation-in-Streams",
-)
-
+        "Introduction"
+        "Filtering-Operations-in-Stream"
+        "Mapping-Operations-in-Stream"
+        "Method-References"
+        "Optional-in-Java-8-Part-1"
+        "Optional-in-Java-8-Part-2"
+        "Slicing-Operations-in-Stream"
+        "Matching-Operations-in-Stream"
+        "Finding-Operations-in-Stream"
+        "Mutable-Reduction-Through-reduce"
+        "Collectors-Collection-Operations"
+        "Collectors-Aggregation-Operations"
+        "Collectors-Grouping-Operations"
+        "Parallel-Stream"
+        "Lazy-Evaluation-in-Streams"
+    )
 
     for i in "${!items[@]}"; do
         local formatted_num=$(printf "%02d" $((i + 1)))
         local dir_name="${formatted_num}-${items[$i]}"
         mkdir -p "$dir_name"
+
+        # Create README.md inside each directory
+        echo "# README - ${dir_name}" > "$dir_name/README.md"
+
         echo "Created directory: $target_dir/$dir_name"
     done
 }
