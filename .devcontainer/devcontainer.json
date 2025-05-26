@@ -13,13 +13,11 @@
           },
           {
             "name": "JavaSE-17",
-            "path": " /home/gitpod/.sdkman/candidates/java/17.0.15.fx-zulu",
-            "default": true
+            "path": " /home/gitpod/.sdkman/candidates/java/17.0.15.fx-zulu"
           },
           {
             "name": "JavaSE-11",
-            "path": "/home/gitpod/.sdkman/candidates/java/11.0.27.fx-zulu",
-            "default": true
+            "path": "/home/gitpod/.sdkman/candidates/java/11.0.27.fx-zulu"
           }
         ],
         "terminal.integrated.shell.linux": "/bin/bash"
