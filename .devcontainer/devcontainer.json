@@ -10,6 +10,16 @@
             "name": "JavaSE-21",
             "path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem",
             "default": true
+          },
+          {
+            "name": "JavaSE-17",
+            "path": " /home/gitpod/.sdkman/candidates/java/17.0.15.fx-zulu",
+            "default": true
+          },
+          {
+            "name": "JavaSE-11",
+            "path": "/home/gitpod/.sdkman/candidates/java/11.0.27.fx-zulu",
+            "default": true
           }
         ],
         "terminal.integrated.shell.linux": "/bin/bash"
