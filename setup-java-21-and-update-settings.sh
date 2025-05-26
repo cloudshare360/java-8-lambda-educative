@@ -19,7 +19,7 @@ source "$SDKMAN_DIR/bin/sdkman-init.sh"
 # 2. Install Java 21.0.6-tem via SDKMAN
 echo -e "${GREEN}📥 Installing Java 21.0.6-tem...${NC}"
 sdk install java 11.0.27.fx-zulu
-sdk install 17.0.15.fx-zulu
+sdk install java 17.0.15.fx-zulu
 sdk install java 21.0.6-tem
 
 # 3. Set Java 21.0.6-tem as default
