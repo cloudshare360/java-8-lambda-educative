@@ -18,6 +18,9 @@ source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # 2. Install Java 21.0.6-tem via SDKMAN
 echo -e "${GREEN}📥 Installing Java 21.0.6-tem...${NC}"
+apt-get update && apt-get install -y direnv
+apk add --no-cache direnv
+command -v direnv >/dev/null 2>&1 || alias _direnv_hook=':'
 sdk install java 11.0.27.fx-zulu
 sdk install java 17.0.15.fx-zulu
 sdk install java 21.0.6-tem
