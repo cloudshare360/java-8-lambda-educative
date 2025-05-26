@@ -8,32 +8,24 @@ create_directories() {
     mkdir -p "$target_dir"
     cd "$target_dir" || { echo "Failed to enter $target_dir"; exit 1; }
 
-    # local items=(
-    #     "Introduction"
-    #     "Filtering Operations in Stream"
-    #     "Mapping Operations in Stream"
-    #     "Method References"
-    #     "Optional in Java 8: Part 1"
-    #     "Optional in Java 8: Part 2"
-    #     "Slicing Operations in Stream"
-    #     "Matching Operations in Stream"
-    #     "Finding Operations in Stream"
-    #     "Mutable Reduction Through reduce()"
-    #     "Collectors: Collection Operations"
-    #     "Collectors: Aggregation Operations"
-    #     "Collectors: Grouping Operations"
-    #     "Parallel Stream"
-    #     "Lazy Evaluation in Streams"
-    # )
 
-      local items=(
-    "Limitations-of-Old-Date/Time-API"
-    "LocalDate"
-    "LocalTime"
-    "LocalDateTime"
-    "ZonedDateTime"
-    "Period-and-Duration"
-    )
+    local items=(
+"Introduction",
+"Filtering-Operations-in-Stream",
+"Mapping-Operations-in-Stream",
+"Method-References",
+"Optional-in-Java-8-Part-1",
+"Optional-in-Java-8-Part-2",
+"Slicing-Operations-in-Stream",
+"Matching-Operations-in-Stream",
+"Finding-Operations-in-Stream",
+"Mutable-Reduction-Through-reduce",
+"Collectors-Collection-Operations.",
+"Collectors-Aggregation-Operations",
+"Collectors-Grouping-Operations",
+"Parallel-Stream",
+"Lazy-Evaluation-in-Streams",
+)
 
 
     for i in "${!items[@]}"; do

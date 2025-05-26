@@ -1,5 +1,12 @@
 {
   "java.format.settings.url": ".vscode/java-formatter.xml",
   "editor.tabSize": 2,
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem",
+      "default": true
+    }
+  ]
 }
