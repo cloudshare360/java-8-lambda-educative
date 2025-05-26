@@ -3,3 +3,5 @@ image: gitpod/workspace-full
 vscode:
   extensions:
     - vscjava.vscode-java-pack
+    - redhat.java@latest
+    - golang.go@latest # optional, remove if not needed
