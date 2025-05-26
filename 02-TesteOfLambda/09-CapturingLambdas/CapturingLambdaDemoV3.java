@@ -1,15 +1,16 @@
 import java.util.function.UnaryOperator;
 
-public class CapturingLambdaDemo {
+public class CapturingLambdaDemoV3 {
+
+    static int i = 0;
 
     public static void main(String args[]) {
 
-        int i = 6;
-        int j = 5;
+        i = 7;
 
         UnaryOperator<Integer> operator = (input) -> input * i;
 
-        System.out.println(operator.apply(j));
+        System.out.println(operator.apply(i));
 
     }
 }
