@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "StreamDemoFilterWithCustomObject",
+      "request": "launch",
+      "mainClass": "StreamDemoFilterWithCustomObject",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "StreamDemoFilter",
+      "request": "launch",
+      "mainClass": "StreamDemoFilter",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "StreamDemoWithAlphabets",
+      "request": "launch",
+      "mainClass": "StreamDemoWithAlphabets",
+      "projectName": ""
+    },
+    {
+      "type": "java",
       "name": "StreamDemo",
       "request": "launch",
       "mainClass": "StreamDemo",
