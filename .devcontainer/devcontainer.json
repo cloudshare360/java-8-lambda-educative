@@ -19,7 +19,11 @@
 		// Configure properties specific to VS Code.
 		"vscode": {
 			"settings": {
-				
+				"editor.defaultFormatter.java": "redhat.java",
+        "editor.formatOnSave.java": true,
+        "[java]": {
+          "editor.defaultFormatter": "redhat.java",
+          "editor.formatOnSave": true
 			},
 			"extensions": [
 				"redhat.java",
