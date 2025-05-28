@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamDemoMap {
 
@@ -10,19 +11,21 @@ public class StreamDemoMap {
         list.add("Ryan");
         list.add("Iyan");
         list.add("Ray");
-        // map() is used to convert each name to upper case.
-        // Note: The map() method does not modify the original list.
+
+        // Convert to uppercase and print
+        System.out.println("Uppercase Names:");
         list.stream()
-                .map(name -> name.toUpperCase()) //map() takes an input of Function<T, R> type.
-                .forEach(System.out::println);   // forEach() takes an input of Consumer type.
-        //sorted
+            .map(name -> name.toUpperCase())
+            .sorted()
+            .forEach(System.out::println);
+
+        // Convert to uppercase first, then sort, then collect
         List<String> sortedUpperList = list.stream()
-    .sorted()
-    .map(String::toUpperCase)
-    .collect(Collectors.toList());
+            .map(String::toUpperCase)  // Convert to uppercase first
+            .sorted()                   // Now sort the uppercase names
+            .collect(Collectors.toList());
 
-System.out.println(sortedUpperList);
-       
-
+        System.out.println("\nSorted Uppercase List:");
+        System.out.println(sortedUpperList);
     }
 }
