@@ -1,18 +1,59 @@
-eval "$(direnv hook bash)"
-sudo apt-get update
-sudo apt-get install -y direnv
-echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
-source ~/.bashrc
-curl -s "https://get.sdkman.io" | bash
+#!/bin/bash
+
+set -e
+
+# Install direnv if not already installed
+if ! command -v direnv &> /dev/null; then
+    echo "📎 Installing direnv..."
+    sudo apt-get update > /dev/null
+    sudo apt-get install -y direnv > /dev/null
+fi
+
+# Add direnv hook to bashrc if not already present
+if ! grep -q 'eval "$(direnv hook bash)"' ~/.bashrc; then
+    echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
+    source ~/.bashrc
+    echo "📎 direnv hook added to ~/.bashrc"
+else
+    echo "✅ direnv hook already in ~/.bashrc"
+fi
+
+# Install SDKMAN if missing
+if [ ! -d "$HOME/.sdkman" ]; then
+    echo "📎 Installing SDKMAN..."
+    curl -s "https://get.sdkman.io"  | bash > /dev/null
+    source "$HOME/.sdkman/bin/sdkman-init.sh"
+fi
+
+# Load SDKMAN environment
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk env init
+
+# Ensure SDKMAN is up to date
+echo "🔄 Updating SDKMAN..."
 sdk selfupdate force
-sdk version
-echo y |sdk install java 11.0.27-tem 
-echo y |sdk install java 17.0.15-tem
-echo y |sdk install java 21.0.6-tem 
-sdk use java 21.0.6-tem 
-sdk list java | grep "installed"
+
+# List of required Java versions
+declare -a JAVA_VERSIONS=("11.0.27-tem" "17.0.15-tem" "21.0.6-tem")
+
+for version in "${JAVA_VERSIONS[@]}"; do
+    echo ""
+    if sdk list java | grep -q "$version"; then
+        echo "✅ Java $version is already installed."
+    else
+        echo "📥 Installing Java $version via SDKMAN..."
+        sdk install java "$version"
+    fi
+done
+
+# Set Java 21 as default
+echo ""
+echo "⚙️ Setting Java 21.0.6 (tem) as default..."
+sdk default java 21.0.6-tem
+
+# Dynamically determine Java installation path
+JAVA_HOME_PATH="$HOME/.sdkman/candidates/java/current"
+
+# Update PATH dynamically using detected path
 export JAVA_HOME="$JAVA_HOME_PATH"
 export PATH="$JAVA_HOME/bin:$PATH"
 
@@ -29,6 +70,15 @@ elif [[ -f "$HOME/.zshrc" ]]; then
     source "$HOME/.zshrc"
 fi
 
+# Final verification
+echo ""
+echo "✅ Java -version output:"
 java -version
-java -version
-echo $JAVA_HOME
+
+echo ""
+echo "🔗 Resolved Java Binary Path (readlink -f \$(which java)):"
+readlink -f $(which java)
+
+echo ""
+echo "📁 JAVA_HOME set to:"
+echo "$JAVA_HOME"
