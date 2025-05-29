@@ -36,8 +36,8 @@
 
   // Run post-create script
   //"postCreateCommand": "chmod +x scripts/setup-direnv.sh && ./scripts/setup-direnv.sh & chmod +x scripts/setup-java.sh && ./scripts/setup-java.sh",
-  "postCreateCommand": "chmod +x scripts/setup-direnv.sh && ./scripts/setup-direnv.sh",
-
+  //"postCreateCommand": "chmod +x scripts/setup-direnv.sh && ./scripts/setup-direnv.sh",
+   "postCreateCommand": "sdk list java | grep 'installed' && sdk current",
   // Optional: Use non-root user
   "remoteUser": "vscode"
 }
