@@ -19,7 +19,10 @@ if ! command -v sdk &> /dev/null; then
 
     # Load SDKMAN environment
     source "$SDKMAN_DIR/bin/sdkman-init.sh"
+
 fi
+
+
 
 # Verify sdk command is now available
 if ! command -v sdk &> /dev/null; then
