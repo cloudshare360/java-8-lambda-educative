@@ -28,7 +28,6 @@ fi
 # Load SDKMAN environment
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-
 # List of required Java versions
 declare -a JAVA_VERSIONS=("11.0.27-tem" "17.0.15-tem" "21.0.6-tem")
 
