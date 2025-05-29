@@ -28,9 +28,6 @@ fi
 # Load SDKMAN environment
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# Ensure SDKMAN is up to date
-echo "🔄 Updating SDKMAN..."
-sdk selfupdate force
 
 # List of required Java versions
 declare -a JAVA_VERSIONS=("11.0.27-tem" "17.0.15-tem" "21.0.6-tem")
@@ -41,22 +38,41 @@ for version in "${JAVA_VERSIONS[@]}"; do
         echo "✅ Java $version is already installed."
     else
         echo "📥 Installing Java $version via SDKMAN..."
-        sdk install java "$version"
+        echo y | sdk install java "$version"
     fi
+     # Delay to ensure installation finishes and environment settles
+    echo "⏳ Waiting 5 seconds to ensure Java $version setup completes..."
+    sleep 5
 done
 
+echo "displaying all the installed java versions.."
+sdk list java | grep "installed"
+
 # Set Java 21 as default
-echo ""
-echo "⚙️ Setting Java 21.0.6 (tem) as default..."
-sdk default java 21.0.6-tem
+#echo ""
+#echo "⚙️ Setting Java 21.0.6 (tem) as default..."
+#sdk use java 21.0.6-tem
 
 # Dynamically determine Java installation path
-JAVA_HOME_PATH="$HOME/.sdkman/candidates/java/current"
+# Dynamically set JAVA_HOME based on current java executable
+if ! command -v java &> /dev/null; then
+    echo "❌ Java is not installed or not in PATH"
+    exit 1
+fi
+
+JAVA_BIN=$(which java)
+JAVA_REAL_PATH=$(readlink -f "$JAVA_BIN")
+JAVA_HOME_PATH=$(dirname "$(dirname "$JAVA_REAL_PATH")")
 
 # Update PATH dynamically using detected path
 export JAVA_HOME="$JAVA_HOME_PATH"
 export PATH="$JAVA_HOME/bin:$PATH"
 
+echo "Printing JAVA_HOME path"
+echo $JAVA_HOME
+
+#echo "Printing Path"
+#echo $PATH
 # Optional: Add to shell config for persistence
 if [[ -f "$HOME/.bashrc" ]]; then
     echo 'export JAVA_HOME="$HOME/.sdkman/candidates/java/current"' >> "$HOME/.bashrc"
@@ -80,5 +96,9 @@ echo "🔗 Resolved Java Binary Path (readlink -f \$(which java)):"
 readlink -f $(which java)
 
 echo ""
-echo "📁 JAVA_HOME set to:"
-echo "$JAVA_HOME"
+echo "📁 Current Java Version in use:"
+sdk current
+
+sdk list java | grep "installed"
+
+sdk use java  21.0.6-tem
