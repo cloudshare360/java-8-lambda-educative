@@ -38,14 +38,14 @@ for version in "${JAVA_VERSIONS[@]}"; do
         echo "✅ Java $version is already installed."
     else
         echo "📥 Installing Java $version via SDKMAN..."
-        sdk install java "$version"
+        echo y | sdk install java "$version"
     fi
 done
 
 # Set Java 21 as default
 echo ""
 echo "⚙️ Setting Java 21.0.6 (tem) as default..."
-sdk default java 21.0.6-tem
+sdk use java 21.0.6-tem
 
 # Dynamically determine Java 21 installation path
 JAVA_HOME_PATH="$HOME/.sdkman/candidates/java/21.0.6-tem"
