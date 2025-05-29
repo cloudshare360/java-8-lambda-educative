@@ -1,41 +1,53 @@
-# ANSI color codes for output
-GREEN='\033[0;32m'
-NC='\033[0m' # No Color
+#!/bin/bash
 
-echo -e "${GREEN}🚀 Starting JDK 21 setup with SDKMAN...${NC}"
+set -e
 
-# 1. Install SDKMAN if not already installed
-if [ ! -d "$HOME/.sdkman" ]; then
-  echo -e "${GREEN}📦 Installing SDKMAN!${NC}"
-  curl -s "https://get.sdkman.io " | bash
-  source "$HOME/.sdkman/bin/sdkman-init.sh"
-else
-  echo -e "${GREEN}✅ SDKMAN is already installed.${NC}"
-  source "$HOME/.sdkman/bin/sdkman-init.sh"
+# Ensure sudo is available
+if ! command -v sudo &> /dev/null; then
+  echo "❌ sudo is required"
+  exit 1
 fi
 
-# Set non-interactive mode
-export SDKMAN_AUTO_ANSWER=true
+# Install java-common if update-java-alternatives is missing
+if ! command -v update-java-alternatives &> /dev/null; then
+  echo "📎 Installing java-common to get update-java-alternatives..."
+  sudo apt-get update -y > /dev/null
+  sudo apt-get install -y java-common > /dev/null
+  echo "✅ java-common installed"
+fi
 
-# 2. Install Java 21 using SDKMAN
-echo -e "${GREEN}📥 Installing OpenJDK 21 via SDKMAN...${NC}"
-sdk install java 21.0.6-tem
+# Helper function to check and install Java version
+install_java_if_missing() {
+    local version=$1
+    if ! java_home="/usr/lib/jvm/java-${version}-openjdk-amd64" && [ ! -d "$java_home" ]; then
+        echo "📥 Installing Java $version..."
+        sudo apt-get update -y > /dev/null
+        sudo apt-get install -y openjdk-${version}-jdk > /dev/null
+        echo "✅ Java $version installed."
+    else
+        echo "✅ Java $version already installed."
+    fi
+}
 
-# 3. Set Java 21 as default (no prompt)
-echo -e "${GREEN}⚡ Setting Java 21 as default...${NC}"
-yes | sdk default java 21.0.6-tem
+# Install required Java versions
+install_java_if_missing 11
+install_java_if_missing 17
+install_java_if_missing 21
 
-# 4. Get current Java home path
-JAVA_HOME_PATH=$(sdk home java 21.0.6-tem)
+# Set Java 21 as default using update-java-alternatives
+echo "⚙️ Setting Java 21 as default..."
 
-# 5. Print result
-echo -e "${GREEN}✅ JDK 21 is now active at:${NC}"
-echo "$JAVA_HOME_PATH"
+JAVA_21_PATH="/usr/lib/jvm/java-21-openjdk-amd64"
 
-# 6. Verify installation
-echo -e "\n${GREEN}🔍 Verifying Java version:${NC}"
+# Register Java 21 with alternatives system if needed
+for bin in java javac jar; do
+  if [ -f "${JAVA_21_PATH}/bin/${bin}" ]; then
+    echo "📎 Configuring ${bin} to use Java 21..."
+    sudo update-alternatives --install /usr/bin/${bin} ${bin} ${JAVA_21_PATH}/bin/${bin} 2000
+    sudo update-alternatives --set ${bin} ${JAVA_21_PATH}/bin/${bin}
+  fi
+done
+
+# Verify
+echo "✅ Final default Java version:"
 java -version
-
-# 7. Install direnv
-echo -e "${GREEN}📥 Installing OpenJDK 21 via SDKMAN...${NC}"
-sudo apt install direnv
