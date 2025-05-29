@@ -1,6 +1,6 @@
 {
   "name": "Java",
-  "image": "mcr.microsoft.com/vscode/devcontainers/universal:focal",
+  "image": "mcr.microsoft.com/devcontainers/java:1-21",
 
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
