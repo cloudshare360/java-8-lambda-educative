@@ -79,7 +79,7 @@ sdk list java | grep -E 'installed'
 
 echo ""
 echo "📌 Current Default Java Version:"
-sdk current java
+sdk use java 21.0.6-tem
 
 echo ""
 echo "✅ Java -version output:"
