@@ -2,6 +2,28 @@
 
 set -e
 
+
+if ! command -v direnv &> /dev/null; then
+  echo "📥 Installing direnv..."
+  sudo apt-get update -y > /dev/null
+  sudo apt-get install -y direnv > /dev/null
+  echo "✅ direnv installed."
+fi
+
+# Add direnv hook to .bashrc only if not already present
+DIRENV_HOOK='eval "$(direnv hook bash)"'
+if ! grep -qF -- "$DIRENV_HOOK" ~/.bashrc; then
+  echo "📎 Adding direnv hook to ~/.bashrc"
+  echo "$DIRENV_HOOK" >> ~/.bashrc
+else
+  echo "📎 direnv hook already present in ~/.bashrc"
+fi
+
+# Reload bashrc to apply changes immediately
+source ~/.bashrc
+
+echo "✅ direnv setup complete"
+
 # Define SDKMAN_DIR
 export SDKMAN_DIR="$HOME/.sdkman"
 
@@ -66,11 +88,11 @@ fi
 # Final verification
 echo ""
 echo "📌 Installed Java Versions:"
-sdk list java | grep installed
+sdk list java | grep "installed"
 
 echo ""
 echo "📌 Current Default Java Version:"
-sdk current java
+sdk use java 21.0.6-tem
 
 echo ""
 echo "✅ Java -version output:"
