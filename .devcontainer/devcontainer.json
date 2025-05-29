@@ -4,7 +4,7 @@
 
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
-      "version": "none",
+      "version": "8,11,17,21",
       "installMaven": "true",
       "mavenVersion": "3.8.6",
       "installGradle": "false"
