@@ -100,4 +100,4 @@ sdk current
 
 sdk list java | grep "installed"
 
-sdk use java  21.0.6-tem
+sdk default java  21.0.6-tem
