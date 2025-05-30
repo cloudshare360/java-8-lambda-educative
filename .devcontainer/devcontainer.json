@@ -12,9 +12,7 @@
       "mavenVersion": "3.8.6",
       "installGradle": "false"
     },
-   "ghcr.io/devcontainers/features/node:1": {
-     "version":"lts"
-   }
+   "ghcr.io/devcontainers/features/node:1": {}
   },
 
   "customizations": {
