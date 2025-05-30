@@ -3,9 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/java:1-21",
 
   "features": {
-    "ghcr.io/devcontainers-extra/features/direnv:1": {
-      "version": "latest"
-    },
+    "ghcr.io/devcontainers-extra/features/direnv:1": {},
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21",
       "additionalVersions": "8,11,17",
