@@ -7,7 +7,9 @@
       "version": "latest"
     },
     "ghcr.io/devcontainers/features/java:1": {
-      "version": "8,11,17,21",
+      "version": "21",
+      "additionalVersions": "8,11,17",
+      "jdkDistro": "tem",
       "installMaven": "true",
       "mavenVersion": "3.8.6",
       "installGradle": "false"
