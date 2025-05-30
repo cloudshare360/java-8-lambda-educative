@@ -7,7 +7,9 @@
       "version": "latest"
     },
     "ghcr.io/devcontainers/features/java:1": {
-      "version": "8,11,17,21",
+      "version": "21",
+      "additionalVersions": "8,11,17",
+      "jdkDistro": "tem",
       "installMaven": "true",
       "mavenVersion": "3.8.6",
       "installGradle": "false"
@@ -37,7 +39,7 @@
   // Run post-create script
   //"postCreateCommand": "chmod +x scripts/setup-direnv.sh && ./scripts/setup-direnv.sh & chmod +x scripts/setup-java.sh && ./scripts/setup-java.sh",
   //"postCreateCommand": "chmod +x scripts/setup-direnv.sh && ./scripts/setup-direnv.sh",
-   "postCreateCommand": "sdk list java | grep 'installed' && sdk current",
+  "postCreateCommand": "sdk list java | grep 'installed' && sdk current"
   // Optional: Use non-root user
-  "remoteUser": "vscode"
+  //"remoteUser": "vscode"
 }
