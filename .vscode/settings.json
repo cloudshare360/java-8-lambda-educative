@@ -4,6 +4,9 @@
   "editor.tabSize": 2,
   "files.autoSave": "onFocusChange",
   "java.jdt.ls.java.home": "/home/gitpod/.sdkman/candidates/java/current/bin/java",
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.fileDirectoryAsCwd": true,
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-11",
