@@ -6,6 +6,19 @@
   "configurations": [
     {
       "type": "java",
+      "name": "StreamFlatMapWithListListOfStrings",
+      "request": "launch",
+      "mainClass": "StreamFlatMapWithListListOfStrings",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "StreamDemoStreamArrayOfStringsToFlatMapStreamStrings",
+      "request": "launch",
+      "mainClass": "StreamDemoStreamArrayOfStringsToFlatMapStreamStrings"
+    },
+    {
+      "type": "java",
       "name": "StreamDemoFilterWithCustomObject",
       "request": "launch",
       "mainClass": "StreamDemoFilterWithCustomObject",
