@@ -1,13 +1,11 @@
 {
-  "java.project.sourcePaths": "[.]",
-  "java.project.outputPath": ".",
   "java.project.referencedLibraries": ["lib/**/*.jar"],
   "java.format.enabled": true,
   "java.format.settings.url": ".vscode/java-formatter.xml",
   "editor.tabSize": 2,
   "files.autoSave": "onFocusChange",
   // "java.jdt.ls.java.home": "/home/gitpod/.sdkman/candidates/java/current/bin/java",
-  "java.jdt.ls.java.home": "/workspace/.vscode-remote/data/User/globalStorage/pleiades.java-extension-pack-jdk/java/21/bin/java",
+  "java.jdt.ls.java.home": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
   "java.home": "/workspace/.vscode-remote/data/User/globalStorage/pleiades.java-extension-pack-jdk/java/21/bin/java",
   "code-runner.runInTerminal": true,
   "code-runner.saveAllFilesBeforeRun": true,
@@ -20,7 +18,7 @@
     },
     {
       "name": "JavaSE-21",
-      "path": "/workspace/.vscode-remote/data/User/globalStorage/pleiades.java-extension-pack-jdk/java/21/bin/java",
+      "path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
       "default": true
     }
   ],
