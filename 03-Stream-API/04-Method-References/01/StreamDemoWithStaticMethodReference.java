@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class StreamDemoWithStaticMethodReference {
+public class StreamDemoWithStaticMethodReference01 {
 
   public static int getLength(String str) {
     return str.length();
