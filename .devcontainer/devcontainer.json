@@ -22,6 +22,7 @@
           "editor.defaultFormatter": "redhat.java",
           "editor.formatOnSave": true
         },
+        "java.jdt.ls.java.home": "/home/gitpod/.sdkman/candidates/java/11.0.27.fx-zulu/bin/java",
         "java.configuration.runtimes": [
           {
             "name": "JavaSE-11",
