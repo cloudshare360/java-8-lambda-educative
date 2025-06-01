@@ -1,4 +1,7 @@
 {
+  "java.project.sourcePaths": "[.]",
+  "java.project.outputPath": ".",
+  "java.project.referencedLibraries": ["lib/**/*.jar"],
   "java.format.enabled": true,
   "java.format.settings.url": ".vscode/java-formatter.xml",
   "editor.tabSize": 2,
