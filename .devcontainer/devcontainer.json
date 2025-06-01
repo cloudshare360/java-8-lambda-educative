@@ -21,7 +21,18 @@
         "[java]": {
           "editor.defaultFormatter": "redhat.java",
           "editor.formatOnSave": true
-        }
+        },
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-11",
+            "path": "/home/gitpod/.sdkman/candidates/java/11.0.27.fx-zulu/bin/java"
+          },
+          {
+            "name": "JavaSE-21",
+            "path": "/workspace/.vscode-remote/data/User/globalStorage/pleiades.java-extension-pack-jdk/java/21/bin/java",
+            "default": true
+          }
+        ]
       },
       "extensions": [
         "redhat.java",
