@@ -2,13 +2,9 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - name: Install java-21=tem
-    init: |
-      echo "📦 Installing jdk 21 tem..."
-      sdk install java 21.0.6-tem
-      sdk default java 21.0.6-tem
-      sdk current
-      echo "✅ java 21.0.6 tem is installed"
+  - init: |
+      export JAVA_HOME=/home/gitpod/.sdkman/candidates/java/21.0.6-tem
+      export PATH=$JAVA_HOME/bin:$PATH
 
   - name: List Java Versions
     init: sdk list java | grep installed
