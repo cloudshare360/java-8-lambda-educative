@@ -22,7 +22,7 @@
           "editor.defaultFormatter": "redhat.java",
           "editor.formatOnSave": true
         },
-        "java.jdt.ls.java.home": "/home/gitpod/.sdkman/candidates/java/11.0.27.fx-zulu/bin/java",
+        "java.jdt.ls.java.home": "/home/gitpod/.sdkman/candidates/java/current/bin/java",
         "java.configuration.runtimes": [
           {
             "name": "JavaSE-11",
@@ -30,7 +30,7 @@
           },
           {
             "name": "JavaSE-21",
-            "path": "/workspace/.vscode-remote/data/User/globalStorage/pleiades.java-extension-pack-jdk/java/21/bin/java",
+            "path": "/home/gitpod/.sdkman/candidates/java/21.0.7.fx-zulu/bin/java",
             "default": true
           }
         ]

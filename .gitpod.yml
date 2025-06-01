@@ -1,4 +1,5 @@
-image: gitpod/workspace-java-21
+image:
+  file: .gitpod.Dockerfile
 
 tasks:
   - name: Install java-21=tem
@@ -8,6 +9,9 @@ tasks:
       sdk default java 21.0.6-tem
       sdk current
       echo "✅ java 21.0.6 tem is installed"
+
+  - name: List Java Versions
+    init: sdk list java | grep installed
 
   - name: Install direnv
     init: |
