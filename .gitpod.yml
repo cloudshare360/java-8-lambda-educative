@@ -2,3 +2,11 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - init: mvn package
+vscode:
+  extensions:
+    - redhat.java
+    - VisualStudioExptTeam.vscodeintellicode
+    - vscjava.vscode-java-pack
+    - pleiades.java-extension-pack-jdk
+    - formulahendry.code-runner
+    - streetsidesoftware.code-spell-checker
