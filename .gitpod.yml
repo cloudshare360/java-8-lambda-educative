@@ -1,6 +1,13 @@
 image: gitpod/workspace-java-21
 
 tasks:
+  - name: Install java-21=tem
+    init: |
+      echo "📦 Installing jdk 21 tem..."
+      sdk install java 21.0.6-tem
+      sdl default java 21.0.6-tem
+      echo "✅ direnv installed"
+
   - name: Install direnv
     init: |
       echo "📦 Installing direnv..."
