@@ -1,4 +1,19 @@
 image: gitpod/workspace-java-21
+
+tasks:
+  - name: Install direnv
+    init: |
+      echo "📦 Installing direnv..."
+      curl -sfL https://direnv.net/sHELL  | bash
+      echo "✅ direnv installed"
+
+  - name: Setup direnv hook for bash
+    init: |
+      echo "🔌 Adding direnv hook to ~/.bashrc..."
+      echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
+      source ~/.bashrc
+      echo "✅ direnv hook added and sourced"
+
 vscode:
   extensions:
     - redhat.java
