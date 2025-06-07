@@ -8,8 +8,9 @@
 	"features": {
     "ghcr.io/devcontainers-extra/features/direnv:1": {},
 		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
-			"installMaven": "true"
+			"version": "21",
+			"installMaven": "true",
+      "jdkDistro": "tem"
     }
 	},
 
