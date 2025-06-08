@@ -15,42 +15,42 @@
     {
       "name": "JavaSE-11",
       //"path": "/home/gitpod/.sdkman/candidates/java/current/bin/java",
-      "path": "/usr/lib/jvm/msopenjdk-current/bin/java"
+      "path": "/usr/lib/jvm/msopenjdk-current"
     },
     {
       "name": "JavaSE-21",
       //"path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
-      "path": "/usr/lib/jvm/msopenjdk-current/bin/java",
-      "default": true
-    },
-    {
-      "name": "JavaSE-21",
-      //"path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
-      "path": "home/gitpod/.sdkman/candidates/java/21.0.7.fx-zulu/bin/java",
-      "default": true
-    },
-    {
-      "name": "JavaSE-21",
-      "path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
+      "path": "/usr/lib/jvm/msopenjdk-current",
       "default": true
     },
     {
       "name": "JavaSE-21",
       //"path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
-      "path": "/usr/local/sdkman/candidates/java/21.0.6-tem/bin/java",
+      "path": "home/gitpod/.sdkman/candidates/java/21.0.7.fx-zulu",
+      "default": true
+    },
+    {
+      "name": "JavaSE-21",
+      "path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem",
       "default": true
     },
     {
       "name": "JavaSE-21",
       //"path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
-      "path": "/usr/local/sdkman/candidates/java/21.0.7-tem/bin/java",
+      "path": "/usr/local/sdkman/candidates/java/21.0.6-tem",
       "default": true
     },
     {
       "name": "JavaSE-21",
-      "path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
+      //"path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
+      "path": "/usr/local/sdkman/candidates/java/21.0.7-tem",
+      "default": true
+    },
+    {
+      "name": "JavaSE-21",
+      "path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem",
       "default": true
     }
   ],
-  "java.import.gradle.java.home": "/usr/share/java"
+  "java.import.gradle.java.home": "/usr/lib/jvm/msopenjdk-current"
 }
