@@ -7,8 +7,7 @@
   // "java.jdt.ls.java.home": "/home/gitpod/.sdkman/candidates/java/current/bin/java",
   //"java.jdt.ls.java.home": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
   //"java.home": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
-  "java.jdt.ls.java.home": "/usr/local/sdkman/candidates/java/current/bin/java",
-  
+  "java.jdt.ls.java.home": "/home/gitpod/.sdkman/candidates/java/21.0.7.fx-zulu/bin/java",
   "code-runner.runInTerminal": true,
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.fileDirectoryAsCwd": true,
@@ -16,14 +15,42 @@
     {
       "name": "JavaSE-11",
       //"path": "/home/gitpod/.sdkman/candidates/java/current/bin/java",
-      "path": "/usr/local/sdkman/candidates/java/current/bin/java",
+      "path": "/usr/lib/jvm/msopenjdk-current/bin/java"
+    },
+    {
+      "name": "JavaSE-21",
+      //"path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
+      "path": "/usr/lib/jvm/msopenjdk-current/bin/java",
+      "default": true
+    },
+    {
+      "name": "JavaSE-21",
+      //"path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
+      "path": "home/gitpod/.sdkman/candidates/java/21.0.7.fx-zulu/bin/java",
+      "default": true
+    },
+    {
+      "name": "JavaSE-21",
+      "path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
+      "default": true
     },
     {
       "name": "JavaSE-21",
       //"path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
       "path": "/usr/local/sdkman/candidates/java/21.0.6-tem/bin/java",
       "default": true
+    },
+    {
+      "name": "JavaSE-21",
+      //"path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
+      "path": "/usr/local/sdkman/candidates/java/21.0.7-tem/bin/java",
+      "default": true
+    },
+    {
+      "name": "JavaSE-21",
+      "path": "/home/gitpod/.sdkman/candidates/java/21.0.6-tem/bin/java",
+      "default": true
     }
   ],
-  "java.import.gradle.java.home": "/home/gitpod/.sdkman/candidates/java/current/bin/java"
+  "java.import.gradle.java.home": "/usr/share/java"
 }
