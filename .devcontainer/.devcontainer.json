@@ -22,7 +22,8 @@
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
         "vscjava.vscode-java-pack",
-				"YasharHabibi.run-bash-script"
+				"YasharHabibi.run-bash-script",
+        "formulahendry.code-runner"
 			]
 		}
 	}
