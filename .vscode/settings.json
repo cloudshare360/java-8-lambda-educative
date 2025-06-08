@@ -52,5 +52,6 @@
       "default": true
     }
   ],
-  "java.import.gradle.java.home": "/usr/lib/jvm/msopenjdk-current"
+  "java.import.gradle.java.home": "/usr/lib/jvm/msopenjdk-current",
+  "java.debug.settings.onBuildFailureProceed": true
 }
