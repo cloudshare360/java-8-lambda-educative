@@ -22,7 +22,8 @@
 			"settings": {},
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
-        "vscjava.vscode-java-pack"
+        "vscjava.vscode-java-pack",
+				"YasharHabibi.run-bash-script"
 			]
 		}
 	}
