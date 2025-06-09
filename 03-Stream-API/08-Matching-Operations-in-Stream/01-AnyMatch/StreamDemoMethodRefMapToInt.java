@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.uStreamDemoMethodRefMapToInt {
 
-public class StreamDemo {
+    public int getLength(String str) {
+        return str.length();
+    }
 
-  public static void main(String[] args) {
-    List<Person> list = new ArrayList<>();
-    list.add(new Person("Dave", 23, "India"));
-    list.add(new Person("Joe", 18, "USA"));
-    list.add(new Person("Ryan", 54, "Canada"));
-    list.add(new Person("Iyan", 5, "India"));
-    list.add(new Person("Ray", 63, "China"));
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("done");
+        list.add("word");
+        list.add("practice");
+        list.add("fake");
 
-    boolean anyCanadian = list.stream().anyMatch(p -> p.getCountry().equals("Canada"));
+        StreamDemoMethodRefMapToInt demo = new StreamDemoMethodRefMapToIntanyMatch(p -> p.getCountry().equals("Canada"));
 
     System.out.println("Is there any resident of Canada: " + anyCanadian);
 

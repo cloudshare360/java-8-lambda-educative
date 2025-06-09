@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class StreamDemo {
+public class StreamDemoMatchAll {
 
     public static void main(String[] args) {
         List<Person> list = new ArrayList<>();
