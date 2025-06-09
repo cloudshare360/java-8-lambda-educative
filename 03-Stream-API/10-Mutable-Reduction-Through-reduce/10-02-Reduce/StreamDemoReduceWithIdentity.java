@@ -13,8 +13,13 @@ public class StreamDemoReduceWithIdentity {
         list.add(5);
         list.add(6);
 
-        int totalSum = list.stream()
-                .reduce(5, (partialSum, num) -> partialSum + num);
+        System.out.println("Total Sum is " + list.stream().reduce((a, b) -> a + b).get());
+
+        System.out.println("Total Sum is " + list.stream().reduce(Integer::sum).orElse(0));
+
+        list.stream().reduce(Integer::sum).ifPresent(sum -> System.out.println(sum));
+
+        int totalSum = list.stream().reduce(5, (partialSum, num) -> partialSum + num);
 
         System.out.println("Total Sum is " + totalSum);
     }
