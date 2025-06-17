@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class StreamDemo {
+public class StreamDemoMethodRefMapToInt {
 
     public int getLength(String str) {
         return str.length();
@@ -14,7 +14,7 @@ public class StreamDemo {
         list.add("practice");
         list.add("fake");
 
-        StreamDemo demo = new StreamDemo();
+        StreamDemoMethodRefMapToInt demo = new StreamDemoMethodRefMapToInt();
         // Code without instance method reference.
         list.stream().mapToInt(str -> demo.getLength(str)).forEach(System.out::println);
 

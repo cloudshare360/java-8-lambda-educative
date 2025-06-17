@@ -14,17 +14,19 @@
     }
   },
 
-  // Configure tool-specific properties.
-  "customizations": {
-    // Configure properties specific to VS Code.
-    "vscode": {
-      "settings": {},
-      "extensions": [
-        "streetsidesoftware.code-spell-checker",
-        "vscjava.vscode-java-pack"
-      ]
-    }
-  }
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+        "vscjava.vscode-java-pack",
+				"YasharHabibi.run-bash-script",
+        "formulahendry.code-runner"
+			]
+		}
+	}
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],

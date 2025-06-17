@@ -19,10 +19,7 @@ if ! command -v sdk &> /dev/null; then
 
     # Load SDKMAN environment
     source "$SDKMAN_DIR/bin/sdkman-init.sh"
-
 fi
-
-
 
 # Verify sdk command is now available
 if ! command -v sdk &> /dev/null; then
@@ -81,7 +78,6 @@ echo ""
 echo "📌 Current Default Java Version:"
 sdk use java 21.0.6-tem
 sdk default java 21.0.6-tem
-
 
 echo ""
 echo "✅ Java -version output:"
